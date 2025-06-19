@@ -36,10 +36,18 @@
       gap: 1.5rem;
     }
     .post-card {
+      display: block;
       background: #eafaf1;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.1s ease-in-out;
+    }
+    .post-card:hover {
+      transform: scale(1.02);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
     .post-card h3 {
       margin-top: 0;
@@ -73,21 +81,16 @@
   <main>
     <h2>Latest Posts</h2>
     <div class="blog-grid">
-      <article class="post-card">
-        <h3><a href="posts/post1.html">🌼 How I Got Into Tech</a></h3>
+      <a href="posts/post1.html" class="post-card">
+        <h3>🌼 How I Got Into Tech</h3>
         <p>A short story about my journey into the world of code...</p>
         <span>June 2025</span>
-      </article>
-      <article class="post-card">
-        <h3><a href="#">🌿 Lessons from My First Job</a></h3>
+      </a>
+      <a href="posts/post2.html" class="post-card">
+        <h3>🌿 Lessons from My First Job</h3>
         <p>Some things I wish I knew before starting out...</p>
         <span>May 2025</span>
-      </article>
-      <article class="post-card">
-        <h3><a href="#">🍃 Building My First Website</a></h3>
-        <p>Reflections on designing and coding my personal site from scratch...</p>
-        <span>April 2025</span>
-      </article>
+      </a>
     </div>
   </main>
   <footer>
