@@ -246,7 +246,7 @@ p {
 .hero-image {
     grid-column: 2;
     height: 60vh;
-    background: url('https://via.placeholder.com/800x600/E91E63/FFFFFF?text=Your+Photo+Here') center/cover;
+    background: url('/assets/images/her-image.jpg') center/cover;
 }
 
 .hero h1 {
