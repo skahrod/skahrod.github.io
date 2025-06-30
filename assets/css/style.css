@@ -1,26 +1,50 @@
-/* CSS Custom Properties */
+/* Updated CSS Custom Properties - Empathetic Branding */
 :root {
-    --primary-pink: #ED4672;
-    --secondary-yellow: #FFB400;
-    --accent-orange: #FF7C15;
-    --dark-navy: #1a2332;
-    --medium-gray: #4a5568;
-    --light-gray: #f7fafc;
+    /* New Soft Colour Palette */
+    --soft-rose: #E8B4C5;
+    --warm-sage: #A8C09A;
+    --dusty-coral: #D4A574;
+    --warm-cream: #F9F7F4;
+    --lavender: #C8B5D1;
+    --soft-gold: #E5D4A1;
+    
+    /* Supporting Colors */
+    --charcoal: #4A5568;
+    --soft-gray: #718096;
     --white: #ffffff;
     --text-dark: #2d3748;
     --text-light: #718096;
     
-    --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    /* Legacy support for existing variables */
+    --primary-pink: var(--soft-rose);
+    --secondary-yellow: var(--warm-sage);
+    --accent-orange: var(--dusty-coral);
+    --dark-navy: var(--charcoal);
+    --medium-gray: var(--soft-gray);
+    --light-gray: var(--warm-cream);
+    
+    /* Typography - Softer, More Approachable */
+    --font-family-serif: 'Crimson Text', 'Playfair Display', Georgia, serif;
+    --font-family-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-family-script: 'Dancing Script', cursive;
+    --font-family: var(--font-family-sans);
+    
     --font-weight-light: 300;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-semibold: 600;
     --font-weight-bold: 700;
     
-    --border-radius: 8px;
-    --box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    /* Updated Design Elements */
+    --border-radius: 12px;
+    --border-radius-large: 20px;
+    --box-shadow: 0 4px 20px rgba(232, 180, 197, 0.15);
+    --box-shadow-hover: 0 8px 30px rgba(232, 180, 197, 0.25);
     --transition: all 0.3s ease;
 }
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Dancing+Script:wght@400;500;600&display=swap');
 
 /* Reset and Base Styles */
 * {
@@ -47,25 +71,27 @@ img {
 }
 
 a {
-    color: var(--primary-pink);
+    color: var(--soft-rose);
     text-decoration: none;
     transition: var(--transition);
 }
 
 a:hover {
-    color: var(--accent-orange);
+    color: var(--dusty-coral);
 }
 
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: var(--font-weight-bold);
-    line-height: 1.2;
+    font-family: var(--font-family-serif);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1.3;
     margin-bottom: 1rem;
     color: var(--text-dark);
 }
 
 h1 {
     font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--font-weight-bold);
 }
 
 h2 {
@@ -87,8 +113,9 @@ p {
 
 .lead {
     font-size: 1.25rem;
-    font-weight: var(--font-weight-medium);
-    color: var(--medium-gray);
+    font-weight: var(--font-weight-normal);
+    color: var(--soft-gray);
+    line-height: 1.5;
 }
 
 /* Container and Layout */
@@ -108,8 +135,9 @@ p {
 
 /* Navigation */
 .navbar {
-    background: var(--white);
-    box-shadow: var(--box-shadow);
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(232, 180, 197, 0.1);
     position: fixed;
     top: 0;
     left: 0;
@@ -129,9 +157,10 @@ p {
 }
 
 .nav-logo .logo-text {
+    font-family: var(--font-family-serif);
     font-size: 1.5rem;
     font-weight: var(--font-weight-bold);
-    color: var(--dark-navy);
+    color: var(--charcoal);
 }
 
 .nav-menu {
@@ -148,11 +177,11 @@ p {
 }
 
 .nav-link:hover {
-    color: var(--primary-pink);
+    color: var(--soft-rose);
 }
 
 .nav-link.active {
-    color: var(--primary-pink);
+    color: var(--soft-rose);
 }
 
 .nav-link.active::after {
@@ -162,21 +191,23 @@ p {
     left: 0;
     right: 0;
     height: 2px;
-    background: var(--primary-pink);
+    background: var(--soft-rose);
+    border-radius: 1px;
 }
 
 .cta-button {
-    background: var(--primary-pink);
+    background: linear-gradient(135deg, var(--soft-rose), var(--dusty-coral));
     color: var(--white) !important;
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
     font-weight: var(--font-weight-semibold);
     transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 .cta-button:hover {
-    background: var(--accent-orange);
     transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .nav-toggle {
@@ -194,11 +225,12 @@ p {
     background: var(--text-dark);
     margin: 3px 0;
     transition: var(--transition);
+    border-radius: 2px;
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, var(--dark-navy) 0%, var(--medium-gray) 100%);
+    background: linear-gradient(135deg, var(--charcoal) 0%, var(--soft-gray) 100%);
     color: var(--white);
     padding: 10rem 0 6rem;
     text-align: center;
@@ -213,7 +245,8 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="50" cy="10" r="1" fill="%23ffffff" opacity="0.03"/><circle cx="20" cy="70" r="1" fill="%23ffffff" opacity="0.03"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    background: radial-gradient(circle at 30% 70%, rgba(232, 180, 197, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(168, 192, 154, 0.1) 0%, transparent 50%);
 }
 
 .hero-content {
@@ -224,6 +257,7 @@ p {
 .hero h1 {
     color: var(--white);
     margin-bottom: 1.5rem;
+    font-family: var(--font-family-serif);
 }
 
 .hero .lead {
@@ -249,7 +283,7 @@ p {
 .stat-number {
     font-size: 2rem;
     font-weight: var(--font-weight-bold);
-    color: var(--secondary-yellow);
+    color: var(--soft-gold);
     display: block;
 }
 
@@ -270,16 +304,17 @@ p {
     border: none;
     cursor: pointer;
     text-decoration: none;
+    box-shadow: var(--box-shadow);
 }
 
 .btn-primary {
-    background: var(--primary-pink);
+    background: linear-gradient(135deg, var(--soft-rose), var(--dusty-coral));
     color: var(--white);
 }
 
 .btn-primary:hover {
-    background: var(--accent-orange);
     transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
     color: var(--white);
 }
 
@@ -291,7 +326,7 @@ p {
 
 .btn-secondary:hover {
     background: var(--white);
-    color: var(--dark-navy);
+    color: var(--charcoal);
 }
 
 .btn-group {
@@ -304,21 +339,22 @@ p {
 /* Cards */
 .card {
     background: var(--white);
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-large);
     box-shadow: var(--box-shadow);
-    padding: 2rem;
+    padding: 2.5rem;
     transition: var(--transition);
+    border: 1px solid rgba(232, 180, 197, 0.1);
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .card-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary-pink), var(--accent-orange));
+    background: linear-gradient(135deg, var(--soft-rose), var(--dusty-coral));
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -331,6 +367,7 @@ p {
 .card h3 {
     color: var(--text-dark);
     margin-bottom: 1rem;
+    font-family: var(--font-family-serif);
 }
 
 .card p {
@@ -360,23 +397,25 @@ p {
 .service-number {
     width: 50px;
     height: 50px;
-    background: var(--secondary-yellow);
-    color: var(--dark-navy);
+    background: var(--warm-sage);
+    color: var(--white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: var(--font-weight-bold);
     margin: 0 auto 1rem;
+    box-shadow: var(--box-shadow);
 }
 
 /* Testimonial */
 .testimonial {
-    background: var(--light-gray);
-    border-left: 4px solid var(--primary-pink);
-    padding: 2rem;
-    border-radius: var(--border-radius);
+    background: var(--warm-cream);
+    border-left: 4px solid var(--soft-rose);
+    padding: 2.5rem;
+    border-radius: var(--border-radius-large);
     margin: 2rem 0;
+    box-shadow: var(--box-shadow);
 }
 
 .testimonial-text {
@@ -384,16 +423,17 @@ p {
     font-size: 1.1rem;
     margin-bottom: 1rem;
     color: var(--text-dark);
+    font-family: var(--font-family-serif);
 }
 
 .testimonial-author {
     font-weight: var(--font-weight-semibold);
-    color: var(--medium-gray);
+    color: var(--soft-gray);
 }
 
 /* Footer */
 .footer {
-    background: var(--dark-navy);
+    background: var(--charcoal);
     color: var(--white);
     padding: 3rem 0 1rem;
 }
@@ -409,6 +449,7 @@ p {
 .footer-section h4 {
     color: var(--white);
     margin-bottom: 1rem;
+    font-family: var(--font-family-serif);
 }
 
 .footer-section p,
@@ -430,7 +471,7 @@ p {
 }
 
 .footer-section a:hover {
-    color: var(--secondary-yellow);
+    color: var(--soft-gold);
 }
 
 .social-links {
@@ -445,21 +486,23 @@ p {
 }
 
 .social-links a:hover {
-    color: var(--secondary-yellow);
+    color: var(--soft-gold);
 }
 
 .footer-cta {
-    background: var(--primary-pink);
+    background: linear-gradient(135deg, var(--soft-rose), var(--dusty-coral));
     color: var(--white) !important;
     padding: 0.75rem 1.5rem;
     border-radius: var(--border-radius);
     display: inline-block;
     margin-top: 1rem;
     transition: var(--transition);
+    box-shadow: var(--box-shadow);
 }
 
 .footer-cta:hover {
-    background: var(--accent-orange);
+    transform: translateY(-2px);
+    box-shadow: var(--box-shadow-hover);
 }
 
 .footer-bottom {
@@ -481,7 +524,8 @@ p {
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
-        background: var(--white);
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
@@ -557,13 +601,46 @@ p {
 .mt-4 { margin-top: 2rem; }
 
 .highlight {
-    color: var(--primary-pink);
+    color: var(--soft-rose);
 }
 
 .accent {
-    color: var(--accent-orange);
+    color: var(--dusty-coral);
 }
 
 .secondary {
-    color: var(--secondary-yellow);
+    color: var(--warm-sage);
+}
+
+/* Special Elements */
+.signature-text {
+    font-family: var(--font-family-script);
+    font-size: 1.2em;
+    color: var(--soft-rose);
+}
+
+.warm-background {
+    background: linear-gradient(135deg, var(--warm-cream), rgba(232, 180, 197, 0.05));
+}
+
+/* Enhanced Spacing and Flow */
+.section + .section {
+    border-top: 1px solid rgba(232, 180, 197, 0.1);
+}
+
+/* Soft Animations */
+@keyframes gentle-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.card-icon {
+    animation: gentle-float 6s ease-in-out infinite;
+}
+
+/* Focus States for Accessibility */
+.btn:focus,
+.nav-link:focus {
+    outline: 2px solid var(--soft-rose);
+    outline-offset: 2px;
 }

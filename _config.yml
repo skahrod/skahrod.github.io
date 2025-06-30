@@ -1,6 +1,6 @@
 # Site settings
-title: Sandy Kahrod - Product & Technology Transformation Leader
-description: Award-winning product leader specialising in technology transformation, portfolio strategy, and scaling internal systems for senior leadership teams.
+title: Sandy Kahrod - Thoughtful Technology Transformation
+description: Award-winning product leader who believes the most powerful technology transformations happen when we honour both people and performance. Creating meaningful change that resonates throughout organisations.
 baseurl: ""
 url: "https://sandykahrod.co.uk"
 
@@ -8,6 +8,10 @@ url: "https://sandykahrod.co.uk"
 linkedin_username: sandykahrod
 email: skahrod@hotmail.com
 phone: "07961 430242"
+
+# Brand personality
+tagline: "Transform with Purpose. Build with Heart. Lead with Impact."
+approach: "Where technical expertise meets human understanding"
 
 # Build settings
 markdown: kramdown
@@ -28,6 +32,7 @@ exclude:
   - README.md
   - Gemfile
   - Gemfile.lock
+  - DEPLOYMENT-CHECKLIST.md
 
 # SEO
 author: Sandy Kahrod
@@ -43,3 +48,30 @@ defaults:
     values:
       layout: "post"
       author: "Sandy Kahrod"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+# Site personality and values
+values:
+  - "People-centred strategy that honours relationships and empathy"
+  - "Meaningful results that represent real human impact"
+  - "Sustainable excellence through nurturing growth and capability"
+  - "Thoughtful leadership that creates lasting positive change"
+
+# Services focus areas
+services:
+  - name: "Technology Transformation Leadership"
+    description: "Thoughtful, people-centred transformation strategy"
+    icon: "🌱"
+  - name: "Internal Platform & Systems Strategy" 
+    description: "Building sustainable, scalable internal capabilities"
+    icon: "✨"
+  - name: "Portfolio & Product Management Excellence"
+    description: "Strategic portfolio ownership with human impact focus"
+    icon: "📊"
+  - name: "Team Leadership & Organisational Change"
+    description: "Creating environments where people and teams thrive"
+    icon: "🤝"
