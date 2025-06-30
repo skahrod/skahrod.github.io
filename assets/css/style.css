@@ -267,9 +267,13 @@ p {
     border-bottom: 4px solid var(--vibrant-orange);
     padding: 3rem 0;
     margin: 0;
+    width: 100%; /* Ensure full width */
 }
 
 .stats-banner .container {
+    max-width: var(--container-width); /* This should already be 1600px */
+    margin: 0 auto;
+    padding: 0 2rem;
     color: var(--pure-white);
     text-align: center;
 }
