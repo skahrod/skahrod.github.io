@@ -246,7 +246,7 @@ p {
 .hero-image {
     grid-column: 2;
     height: 60vh;
-    background: url('/assets/images/hero-image.jpg') center/cover;
+    background: url('/assets/images/hero-image.png') center/cover;
 }
 
 .hero h1 {
@@ -567,15 +567,15 @@ p {
 }
 
 .article-card:nth-child(1) .article-image {
-    background-image: url('/assets/images/about-me-image.jpg');
+    background-image: url('/assets/images/article-1.png');
 }
 
 .article-card:nth-child(2) .article-image {
-    background-image: url('/assets/images/about-me-image.jpg');
+    background-image: url('/assets/images/article-2.png');
 }
 
 .article-card:nth-child(3) .article-image {
-    background-image: url('/assets/images/about-me-image.jpg');
+    background-image: url('/assets/images/article-3.png');
 }
 
 .article-content {
