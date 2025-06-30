@@ -562,7 +562,7 @@ p {
 .article-image {
     height: 200px;
     background: var(--medium-gray);
-    background-image: url('https://via.placeholder.com/400x200/6C757D/FFFFFF?text=Article+Image');
+    background-image: url('/assets/images/about-me-image');
     background-size: cover;
     background-position: center;
 }
