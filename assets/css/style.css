@@ -529,7 +529,7 @@ p {
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background: var(--light-gray);
+    background: var(--medium-gray);
     border: none;
     cursor: pointer;
     transition: var(--transition);
