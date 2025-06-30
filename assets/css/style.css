@@ -713,6 +713,24 @@ p {
     font-size: 0.9rem;
 }
 
+.footer-section .btn-consultation {
+    background: var(--pure-white);
+    color: var(--pure-black);
+    border: 2px solid var(--pure-black);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    margin-top: 1rem;
+    display: inline-block;
+    font-weight: var(--font-weight-semibold);
+    transition: var(--transition);
+}
+
+.footer-section .btn-consultation:hover {
+    background: var(--pure-black);
+    color: var(--pure-white);
+    border-color: var(--pure-black);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
     .container {
