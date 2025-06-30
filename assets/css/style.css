@@ -431,7 +431,7 @@ p {
     padding: 3rem;
     border-radius: var(--border-radius-large);
     margin: 0 auto;
-    max-width: 1000px;
+    max-width: 1600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
