@@ -9,11 +9,6 @@
     <!-- SEO -->
     {% seo %}
     
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     
@@ -70,7 +65,7 @@
                     <h4>Services</h4>
                     <ul>
                         <li><a href="{{ '/services/' | relative_url }}">Technology Transformation</a></li>
-                        <li><a href="{{ '/services/' | relative_url }}">Product Strategy</a></li>
+                        <li><a href="{{ '/services/' | relative_url }}">Platform Development</a></li>
                         <li><a href="{{ '/services/' | relative_url }}">Internal Systems Scaling</a></li>
                         <li><a href="{{ '/services/' | relative_url }}">Team Leadership</a></li>
                     </ul>
@@ -80,12 +75,12 @@
                     <h4>Connect</h4>
                     <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
                     <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
-                    <a href="https://calendly.com/sandykahrod" class="footer-cta" target="_blank">Schedule a Consultation</a>
+                    <a href="https://calendly.com/sandykahrod" class="btn btn-primary" target="_blank">Schedule a Consultation</a>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; {{ 'now' | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+                <p>&copy;{{ 'now' | date: '%Y' }} Sandy Kahrod Ltd. All rights reserved.</p>
             </div>
         </div>
     </footer>

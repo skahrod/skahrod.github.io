@@ -4,14 +4,13 @@ description: Award-winning product leader who believes the most powerful technol
 baseurl: ""
 url: "https://sandykahrod.co.uk"
 
-# Social media
+# Contact information
 linkedin_username: sandykahrod
 email: skahrod@hotmail.com
 phone: "07961 430242"
 
 # Brand personality
 tagline: "Transform with Purpose. Build with Heart. Lead with Impact."
-approach: "Where technical expertise meets human understanding"
 
 # Build settings
 markdown: kramdown
@@ -53,25 +52,3 @@ defaults:
       type: "pages"
     values:
       layout: "default"
-
-# Site personality and values
-values:
-  - "People-centred strategy that honours relationships and empathy"
-  - "Meaningful results that represent real human impact"
-  - "Sustainable excellence through nurturing growth and capability"
-  - "Thoughtful leadership that creates lasting positive change"
-
-# Services focus areas
-services:
-  - name: "Technology Transformation Leadership"
-    description: "Thoughtful, people-centred transformation strategy"
-    icon: "🌱"
-  - name: "Internal Platform & Systems Strategy" 
-    description: "Building sustainable, scalable internal capabilities"
-    icon: "✨"
-  - name: "Portfolio & Product Management Excellence"
-    description: "Strategic portfolio ownership with human impact focus"
-    icon: "📊"
-  - name: "Team Leadership & Organisational Change"
-    description: "Creating environments where people and teams thrive"
-    icon: "🤝"

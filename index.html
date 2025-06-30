@@ -3,41 +3,49 @@ layout: default
 title: Home
 ---
 
-<!-- Hero Section -->
+<!-- Hero Section with Image -->
 <section class="hero">
-    <div class="container">
+    <div class="hero-container">
         <div class="hero-content">
-            <h1>Transform with <span class="highlight">Purpose</span>.<br>Build with <span class="secondary">Heart</span>.<br>Lead with <span class="accent">Impact</span>.</h1>
+            <h1>Transform with <span style="color: var(--hot-pink);">Purpose</span>.<br>Build with <span style="color: var(--electric-yellow);">Heart</span>.<br>Lead with <span style="color: var(--vibrant-orange);">Impact</span>.</h1>
             <p class="lead">I believe that the most successful technology transformations happen when we honour both people and performance. With over a decade of experience, I help senior leaders create meaningful change that resonates throughout their organisations.</p>
-            
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">35x</span>
-                    <span class="stat-label">Pipeline Growth Achieved</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">200%</span>
-                    <span class="stat-label">Team Performance Improvement</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">£1M+</span>
-                    <span class="stat-label">Value Created Together</span>
-                </div>
-                <div class="stat">
-                    <span class="stat-number">10+</span>
-                    <span class="stat-label">Years of Thoughtful Leadership</span>
-                </div>
-            </div>
             
             <div class="btn-group">
                 <a href="https://calendly.com/sandykahrod" class="btn btn-primary" target="_blank">Let's Start a Conversation</a>
                 <a href="{{ '/services/' | relative_url }}" class="btn btn-secondary">Discover My Approach</a>
             </div>
         </div>
+        
+        <div class="hero-image"></div>
     </div>
 </section>
 
-<!-- Value Proposition Section -->
+<!-- Stats Banner -->
+<section class="stats-banner">
+    <div class="container">
+        <h3>Trusted by Leaders for Delivering Results</h3>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <span class="stat-number">35x</span>
+                <span class="stat-label">Pipeline Growth Achieved</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">200%</span>
+                <span class="stat-label">Team Performance Improvement</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">£1M+</span>
+                <span class="stat-label">Value Created Together</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <span class="stat-label">Years of Thoughtful Leadership</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Leaders Choose to Work with Me -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-4">
@@ -47,19 +55,16 @@ title: Home
         
         <div class="grid grid-3">
             <div class="card">
-                <div class="card-icon">🌱</div>
                 <h3>People-Centred Strategy</h3>
                 <p>Every transformation begins with understanding the human story. I've led technology initiatives across organisations of 3,000+ people by putting relationships and empathy at the heart of strategic planning.</p>
             </div>
             
             <div class="card">
-                <div class="card-icon">📊</div>
                 <h3>Meaningful Results</h3>
                 <p>Numbers tell a story, but it's the human impact that matters most. From 35x pipeline growth to 200% performance improvements, every metric represents real people doing better work.</p>
             </div>
             
             <div class="card">
-                <div class="card-icon">✨</div>
                 <h3>Sustainable Excellence</h3>
                 <p>True transformation doesn't happen overnight. I focus on building internal capabilities, nurturing team growth, and creating systems that continue to flourish long after implementation.</p>
             </div>
@@ -67,175 +72,158 @@ title: Home
     </div>
 </section>
 
-<!-- Personal Philosophy -->
-<section class="section" style="background-color: var(--warm-cream);">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2>My Approach to Technology Leadership</h2>
-            <p class="lead">Where technical expertise meets human understanding</p>
-        </div>
-        
-        <div class="testimonial" style="border-left-color: var(--soft-rose);">
-            <p class="testimonial-text">"I believe that the most powerful technology transformations happen when we create space for both innovation and humanity. It's not just about platforms and processes—it's about people. When we lead with empathy and build with purpose, we create change that truly lasts."</p>
-            <p class="testimonial-author">— Sandy Kahrod</p>
-        </div>
-        
-        <div class="grid grid-2 mt-4">
-            <div class="service-item">
-                <div class="service-number" style="background: var(--soft-rose);">1</div>
-                <h3>Listen Deeply, Plan Thoughtfully</h3>
-                <p>Every engagement begins with understanding your unique story, challenges, and aspirations. I believe the best solutions emerge when we truly listen to what's needed.</p>
-            </div>
-            
-            <div class="service-item">
-                <div class="service-number" style="background: var(--warm-sage);">2</div>
-                <h3>Build with Purpose & Heart</h3>
-                <p>Technology serves people, not the other way around. I design systems and processes that amplify human capability while honoring the way teams naturally work.</p>
-            </div>
-            
-            <div class="service-item">
-                <div class="service-number" style="background: var(--dusty-coral);">3</div>
-                <h3>Nurture Growth & Capability</h3>
-                <p>Sustainable transformation happens when teams feel empowered and supported. I focus on building internal capabilities that continue to flourish independently.</p>
-            </div>
-            
-            <div class="service-item">
-                <div class="service-number" style="background: var(--lavender);">4</div>
-                <h3>Measure What Truly Matters</h3>
-                <p>While metrics are important, the real success lies in creating environments where people thrive, innovation flows, and meaningful work gets done with joy.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience & Trust -->
+<!-- My Approach to Technology Leadership -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-4">
-            <h2>Trusted by Thoughtful Leaders</h2>
-            <p class="lead">A decade of creating meaningful change across the technology sector</p>
+        <div class="philosophy-section">
+            <h2>My Approach to Technology Leadership</h2>
+            <p class="philosophy-quote">"I believe that the most powerful technology transformations happen when we create space for both innovation and humanity. It's not just about platforms and processes—it's about people. When we lead with empathy and build with purpose, we create change that truly lasts."</p>
+            <p class="philosophy-author">— Sandy Kahrod</p>
         </div>
-        
-        <div class="grid grid-2">
-            <div>
-                <h3>Current & Recent Partnerships</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.75rem;"><strong>Head of Product</strong> - Six Degrees <span style="color: var(--soft-rose);">(2025-Present)</span></li>
-                    <li style="margin-bottom: 0.75rem;"><strong>Solutions & Innovation Manager</strong> - Qodea <span style="color: var(--soft-rose);">(2023-2024)</span></li>
-                    <li style="margin-bottom: 0.75rem;"><strong>Head of Portfolio Management</strong> - Claranet <span style="color: var(--soft-rose);">(2020-2022)</span></li>
-                    <li style="margin-bottom: 0.75rem;"><strong>Product Leadership Roles</strong> - Various organisations</li>
-                </ul>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="section">
+    <div class="container">
+        <div class="cta-box">
+            <div class="cta-content">
+                <h2>Ready to Begin a Meaningful Transformation?</h2>
+                <p>I'd love to understand your story and explore how we might work together to create change that truly resonates. Every great transformation begins with a genuine conversation.</p>
             </div>
-            
-            <div>
-                <h3>Recognition & Values</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.75rem;">🏆 <strong>TechWomen100 Award Winner</strong></li>
-                    <li style="margin-bottom: 0.75rem;">🌟 <strong>Diversity & Inclusion Champion</strong></li>
-                    <li style="margin-bottom: 0.75rem;">💬 <strong>Thought Leader & Speaker</strong></li>
-                    <li style="margin-bottom: 0.75rem;">🤝 <strong>Mentor & STEM Ambassador</strong></li>
-                    <li style="margin-bottom: 0.75rem;">📚 <strong>Continuous Learning Advocate</strong></li>
-                </ul>
+            <div class="cta-buttons">
+                <a href="https://calendly.com/sandykahrod" class="btn" target="_blank">Let's Have a Conversation</a>
+                <a href="mailto:{{ site.email }}" class="btn">Drop Me a Message</a>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Client Testimonials -->
-<section class="section warm-background">
+<!-- What Leaders Are Saying -->
+<section class="section">
     <div class="container">
         <div class="text-center mb-4">
             <h2>What Leaders Are Saying</h2>
             <p class="lead">Trusted by executives who've experienced transformational results</p>
         </div>
         
-        <div class="grid grid-2">
-            <div class="card">
-                <div class="testimonial-header">
-                    <h4>"Sandy's strategic approach to our technology transformation was exactly what we needed."</h4>
-                </div>
-                <p>"Working with Sandy means gaining access to someone who combines deep technical expertise with genuine business insight. Her approach to our platform consolidation following our acquisition was both practical and results-focused. She didn't just deliver the technical solution - she created lasting organisational capability that continues to drive value."</p>
-                <div class="testimonial-author">
-                    <strong>Chief Technology Officer</strong><br>
-                    <span>Technology Services Company</span>
-                </div>
+        <div class="testimonials-carousel">
+            <div class="testimonial-slide active">
+                <div class="testimonial-quote-large">"</div>
+                <h3 class="testimonial-title">Sandy's strategic approach was exactly what we needed</h3>
+                <p class="testimonial-text">Working with Sandy means gaining access to someone who combines deep technical expertise with genuine business insight. Her approach to our platform consolidation following our acquisition was both practical and results-focused. She didn't just deliver the technical solution - she created lasting organisational capability that continues to drive value.</p>
+                <p class="testimonial-author"><strong>Chief Technology Officer</strong><br>Technology Services Company</p>
             </div>
             
-            <div class="card">
-                <div class="testimonial-header">
-                    <h4>"The 35x pipeline increase speaks for itself, but it's how Sandy achieved it that impressed us most."</h4>
-                </div>
-                <p>"Sandy took the time to understand our business, our market, and our people before proposing solutions. Her portfolio strategy work didn't just deliver numbers - it created alignment across our entire organisation. The way she brought together sales, product, and technical teams was masterful."</p>
-                <div class="testimonial-author">
-                    <strong>VP of Sales & Marketing</strong><br>
-                    <span>Cloud Services Provider</span>
-                </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-quote-large">"</div>
+                <h3 class="testimonial-title">The 35x pipeline increase speaks for itself</h3>
+                <p class="testimonial-text">Sandy took the time to understand our business, our market, and our people before proposing solutions. Her portfolio strategy work didn't just deliver numbers - it created alignment across our entire organisation. The way she brought together sales, product, and technical teams was masterful.</p>
+                <p class="testimonial-author"><strong>VP of Sales & Marketing</strong><br>Cloud Services Provider</p>
             </div>
             
-            <div class="card">
-                <div class="testimonial-header">
-                    <h4>"Sandy builds systems that actually scale with your business."</h4>
-                </div>
-                <p>"We needed someone who could design our SOC platform for where we're going, not just where we are today. Sandy's experience shows in every aspect of the solution - from technology choices to team structure to operational processes. Two years later, the platform is still performing beautifully as we've doubled in size."</p>
-                <div class="testimonial-author">
-                    <strong>Head of Security Operations</strong><br>
-                    <span>Managed Security Services Provider</span>
-                </div>
+            <div class="testimonial-slide">
+                <div class="testimonial-quote-large">"</div>
+                <h3 class="testimonial-title">Sandy builds systems that actually scale</h3>
+                <p class="testimonial-text">We needed someone who could design our SOC platform for where we're going, not just where we are today. Sandy's experience shows in every aspect of the solution - from technology choices to team structure to operational processes. Two years later, the platform is still performing beautifully as we've doubled in size.</p>
+                <p class="testimonial-author"><strong>Head of Security Operations</strong><br>Managed Security Services Provider</p>
             </div>
             
-            <div class="card">
-                <div class="testimonial-header">
-                    <h4>"She gets the balance between innovation and business reality."</h4>
+            <div class="testimonial-slide">
+                <div class="testimonial-quote-large">"</div>
+                <h3 class="testimonial-title">She gets the balance between innovation and reality</h3>
+                <p class="testimonial-text">What sets Sandy apart is her ability to drive meaningful change without disrupting what's already working well. Her leadership during our internal platform transformation kept the team motivated and focused on outcomes that matter. The efficiency gains we achieved continue to compound months later.</p>
+                <p class="testimonial-author"><strong>Chief Operating Officer</strong><br>Enterprise Technology Company</p>
+            </div>
+            
+            <div class="carousel-nav">
+                <div class="carousel-dots">
+                    <button class="carousel-dot active" data-slide="0"></button>
+                    <button class="carousel-dot" data-slide="1"></button>
+                    <button class="carousel-dot" data-slide="2"></button>
+                    <button class="carousel-dot" data-slide="3"></button>
                 </div>
-                <p>"What sets Sandy apart is her ability to drive meaningful change without disrupting what's already working well. Her leadership during our internal platform transformation kept the team motivated and focused on outcomes that matter. The efficiency gains we achieved continue to compound months later."</p>
-                <div class="testimonial-author">
-                    <strong>Chief Operating Officer</strong><br>
-                    <span>Enterprise Technology Company</span>
-                </div>
             </div>
-        </div>
-        
-        <div class="text-center mt-4">
-            <div class="testimonial" style="max-width: 800px; margin: 2rem auto;">
-                <p class="testimonial-text">"Sandy's greatest strength is her ability to see both the technical requirements and the human elements of transformation. She doesn't just build platforms - she builds capabilities that help teams do their best work. That's what creates lasting value."</p>
-                <p class="testimonial-author">Senior Technology Executive, FTSE 250 Company</p>
-            </div>
-        </div>
-        
-        <!-- Results Summary -->
-        <div class="text-center mt-4" style="background: linear-gradient(135deg, var(--light-gray), var(--pure-white)); padding: 2rem; border-radius: var(--border-radius-large); border: 1px solid rgba(233, 30, 99, 0.1);">
-            <h3 style="margin-bottom: 1.5rem;">Trusted by Leaders At</h3>
-            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; align-items: center; color: var(--medium-gray); font-weight: var(--font-weight-semibold);">
-                <span>Six Degrees</span>
-                <span>•</span>
-                <span>Qodea (Appsbroker)</span>
-                <span>•</span>
-                <span>Claranet</span>
-                <span>•</span>
-                <span>SCC</span>
-                <span>•</span>
-                <span>BT Global Services</span>
-            </div>
-            <p style="margin-top: 1.5rem; font-style: italic; color: var(--medium-gray);">
-                Organisations from scale-ups to FTSE companies across technology services, cloud platforms, and enterprise solutions
-            </p>
         </div>
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="section" style="background: linear-gradient(135deg, var(--soft-rose), var(--dusty-coral)); color: white;">
-    <div class="container text-center">
-        <h2 style="color: white;">Ready to Begin a Meaningful Transformation?</h2>
-        <p class="lead" style="color: rgba(255,255,255,0.9);">I'd love to understand your story and explore how we might work together to create change that truly resonates. Every great transformation begins with a genuine conversation.</p>
-        
-        <div class="btn-group">
-            <a href="https://calendly.com/sandykahrod" class="btn btn-secondary" target="_blank">Let's Have a Conversation</a>
-            <a href="mailto:{{ site.email }}" class="btn btn-secondary">Drop Me a Message</a>
+<!-- Thought Leadership -->
+<section class="thought-leadership">
+    <div class="container">
+        <div class="text-center mb-4">
+            <h2>Latest Insights</h2>
+            <p class="lead">Thought leadership on technology transformation and building high-performing teams</p>
         </div>
         
-        <p style="color: rgba(255,255,255,0.8); margin-top: 2rem; font-size: 0.9rem;">
-            I believe the best collaborations begin with understanding each other's stories and aspirations.
-        </p>
+        <div class="articles-grid">
+            <article class="article-card">
+                <div class="article-image"></div>
+                <div class="article-content">
+                    <h3 class="article-title">Scaling Internal Platforms for Rapid Growth</h3>
+                    <p class="article-excerpt">How to build internal platforms that scale with your business while maintaining operational efficiency and team productivity.</p>
+                    <div class="article-meta">June 2025 • 10 min read</div>
+                </div>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-image"></div>
+                <div class="article-content">
+                    <h3 class="article-title">Building Product Teams That Deliver Results</h3>
+                    <p class="article-excerpt">Practical insights on structuring product teams, implementing agile methodologies, and creating cultures of continuous improvement.</p>
+                    <div class="article-meta">June 2025 • 6 min read</div>
+                </div>
+            </article>
+            
+            <article class="article-card">
+                <div class="article-image"></div>
+                <div class="article-content">
+                    <h3 class="article-title">The Executive's Guide to Technology Transformation</h3>
+                    <p class="article-excerpt">A strategic framework for senior leaders planning comprehensive technology transformation initiatives with practical implementation guidance.</p>
+                    <div class="article-meta">May 2025 • 8 min read</div>
+                </div>
+            </article>
+        </div>
+        
+        <div class="text-center">
+            <a href="{{ '/insights/' | relative_url }}" class="read-more-btn">Read More Insights</a>
+        </div>
     </div>
 </section>
+
+<!-- Final CTA -->
+<section class="final-cta">
+    <div class="container">
+        <h2>Set Your Future in Motion</h2>
+        <p>This is your first step. Find a time that's convenient and book a consultation to explore how we can work together.</p>
+        <a href="https://calendly.com/sandykahrod" class="btn" target="_blank">I'm Ready, Let's Do This!</a>
+    </div>
+</section>
+
+<script>
+// Testimonials Carousel
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    
+    function showSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        slides[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentSlide = index;
+    }
+    
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => showSlide(index));
+    });
+    
+    // Auto-play carousel
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }, 8000);
+});
+</script>

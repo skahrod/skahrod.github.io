@@ -17,8 +17,9 @@ This website showcases Sandy Kahrod's expertise in:
 - **Platform**: Jekyll static site generator
 - **Hosting**: GitHub Pages
 - **Domain**: Custom domain (sandykahrod.co.uk)
-- **Design**: Responsive, mobile-first design with custom CSS
-- **Features**: Blog functionality, contact integration, SEO optimised
+- **Design**: Modern, vibrant design with clean typography
+- **Fonts**: DM Serif Text (headings) + Figtree (body text)
+- **Features**: Testimonials carousel, blog functionality, mobile-responsive
 
 ## Site Structure
 
@@ -42,125 +43,113 @@ This website showcases Sandy Kahrod's expertise in:
 └── Gemfile               # Ruby dependencies
 ```
 
+## Design Features
+
+- **Color Palette**: Hot pink (#E91E63), vibrant orange (#FF6B35), electric yellow (#FFD23F)
+- **Typography**: DM Serif Text for headings, Figtree for body text
+- **Layout**: Wide container (1600px) for better screen utilisation
+- **Hero Section**: Split layout with text left, image right
+- **Stats Banner**: Edge-to-edge black banner with brand color borders
+- **Testimonials**: Carousel format with single testimonials
+- **Mobile-First**: Responsive design that works on all devices
+
+## Key Sections
+
+### Homepage
+- Hero section with personal image placeholder
+- Stats banner showcasing achievements
+- Why leaders choose to work with Sandy
+- Philosophy section in colored box
+- Call-to-action above testimonials
+- Testimonials carousel
+- Thought leadership section
+- Final call-to-action
+
+### Other Pages
+- **Services**: Detailed service offerings
+- **About**: Professional background and credentials
+- **Insights**: Blog/thought leadership content
+- **Contact**: Multiple contact methods and consultation booking
+
 ## Content Management
 
 ### Adding Blog Posts
 
-1. Create a new file in `_posts/` with format: `YYYY-MM-DD-post-title.md`
+1. Create new file in `_posts/` with format: `YYYY-MM-DD-post-title.md`
 2. Add front matter:
 ```yaml
 ---
 layout: post
 title: "Your Post Title"
 date: YYYY-MM-DD
-excerpt: "Brief description of the post"
-tags: [Tag1, Tag2, Tag3]
+excerpt: "Brief description"
+tags: [Tag1, Tag2]
 read_time: "X min read"
 ---
 ```
-3. Write content in Markdown format
+3. Write content in Markdown
 4. Commit and push to GitHub
 
-### Updating Pages
+### Updating Images
 
-- Edit the respective `.html` files in the root directory
-- Changes are automatically deployed via GitHub Pages
-- Allow 5-10 minutes for changes to go live
+- **Hero Image**: Replace placeholder in CSS: `.hero-image` background-image
+- **Article Images**: Update URLs in insights page article cards
+- **Thought Leadership**: Replace placeholder images with real ones
 
-### Updating Contact Information
+### Contact Information
 
-- Edit `_config.yml` for site-wide contact details
-- Update individual pages as needed
+- Update `_config.yml` for site-wide contact details
+- Calendly links point to: `https://calendly.com/sandykahrod`
 
 ## Local Development
 
-To run the site locally:
-
-1. Install Ruby and Bundler
-2. Clone the repository
-3. Run:
 ```bash
 bundle install
 bundle exec jekyll serve
 ```
-4. Visit `http://localhost:4000`
+Visit `http://localhost:4000`
 
 ## Deployment
 
-The site automatically deploys via GitHub Pages when changes are pushed to the main branch.
+Automatically deploys via GitHub Pages when changes are pushed to main branch.
 
 ### Custom Domain Setup
 
-The custom domain `sandykahrod.co.uk` is configured via:
-1. `CNAME` file in the repository
-2. DNS A records pointing to GitHub Pages IPs:
-   - 185.199.108.153
-   - 185.199.109.153  
-   - 185.199.110.153
-   - 185.199.111.153
-3. CNAME record for www subdomain
+1. CNAME file contains: `sandykahrod.co.uk`
+2. GoDaddy DNS A records point to GitHub Pages IPs
+3. HTTPS automatically enabled
 
 ## SEO Features
 
 - Semantic HTML structure
 - Meta descriptions and titles
-- OpenGraph tags for social sharing
 - XML sitemap (auto-generated)
-- robots.txt configuration
 - Fast loading times
 - Mobile-responsive design
+- Clean URLs
 
-## Design Features
+## Brand Colors
 
-- **Colour Palette**: Professional pink (#ED4672), yellow (#FFB400), orange (#FF7C15) with navy/gray foundation
-- **Typography**: Inter font family for modern, professional appearance
-- **Layout**: Mobile-first responsive design
-- **Accessibility**: Semantic markup, proper contrast ratios, keyboard navigation
-- **Performance**: Optimised CSS, minimal JavaScript, fast loading
+```css
+--hot-pink: #E91E63;
+--vibrant-orange: #FF6B35;
+--electric-yellow: #FFD23F;
+--pure-white: #FFFFFF;
+--pure-black: #000000;
+```
 
-## Content Strategy
+## Typography
 
-The website targets senior executives and technology leaders with:
-- Clear value propositions
-- Quantified business results
-- Executive-focused language
-- Multiple conversion paths
-- Trust signals and credibility markers
+```css
+--font-serif: 'DM Serif Text', Georgia, serif;    /* Headings */
+--font-sans: 'Figtree', sans-serif;               /* Body text */
+```
 
-## Analytics & Tracking
+## Browser Support
 
-Currently configured for:
-- Basic Jekyll/GitHub Pages analytics
-- Ready for Google Analytics or Plausible Analytics integration
-- Contact tracking via Calendly integration
-
-## Contact Integration
-
-- **Primary CTA**: Calendly booking system
-- **Secondary**: Direct email contact
-- **Social**: LinkedIn integration
-- No contact forms (by design - using Calendly + email)
-
-## Maintenance
-
-### Regular Updates
-- Review and update portfolio/achievements quarterly
-- Add new blog posts monthly
-- Update speaking engagements and recognition
-- Refresh testimonials and case studies
-
-### Technical Maintenance
-- Monitor site performance and loading times
-- Update Jekyll/dependencies as needed
-- Review and update SEO as search algorithms evolve
-- Test all links and contact methods quarterly
-
-## Support
-
-For technical issues or content updates:
-- Check Jekyll documentation: [jekyllrb.com](https://jekyllrb.com)
-- GitHub Pages documentation: [pages.github.com](https://pages.github.com)
-- For urgent fixes: Edit files directly via GitHub web interface
+- Modern browsers (Chrome, Firefox, Safari, Edge)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+- Graceful degradation for older browsers
 
 ---
 
