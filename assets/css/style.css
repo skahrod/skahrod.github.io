@@ -228,7 +228,7 @@ p {
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: var(--container-width) 1fr;
     align-items: center;
     min-height: 60vh;
     max-width: none;
@@ -238,15 +238,17 @@ p {
 
 .hero-content {
     grid-column: 1;
-    max-width: var(--container-width);
-    margin-left: auto;
-    padding: 0 4rem 0 2rem;
+    padding: 0 2rem;
+    max-width: 100%;
+    justify-self: end;
+    padding-right: 4rem;
 }
 
 .hero-image {
     grid-column: 2;
     height: 60vh;
     background: url('/assets/images/hero-image.png') center/cover;
+    width: 100%;
 }
 
 .hero h1 {
