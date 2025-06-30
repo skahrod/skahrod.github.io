@@ -562,9 +562,20 @@ p {
 .article-image {
     height: 200px;
     background: var(--medium-gray);
-    background-image: url('/assets/images/about-me-image');
     background-size: cover;
     background-position: center;
+}
+
+.article-card:nth-child(1) .article-image {
+    background-image: url('/assets/images/about-me-image.jpg');
+}
+
+.article-card:nth-child(2) .article-image {
+    background-image: url('/assets/images/about-me-image.jpg');
+}
+
+.article-card:nth-child(3) .article-image {
+    background-image: url('/assets/images/about-me-image.jpg');
 }
 
 .article-content {
