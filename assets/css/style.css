@@ -420,47 +420,45 @@ p {
 }
 
 /* Call to Action Box */
-.cta-box {
+.cta-section {
     background: var(--vibrant-orange);
+    padding: 4rem 0;
+    margin: 3rem 0;
+}
+
+.cta-box {
+    background: var(--pure-white);
     padding: 3rem;
     border-radius: var(--border-radius-large);
-    margin: 3rem 0;
+    margin: 0 auto;
+    max-width: 1000px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
-}
-
-.cta-content {
-    flex: 1;
+    box-shadow: var(--box-shadow);
 }
 
 .cta-content h2 {
-    color: var(--pure-white);
+    color: var(--pure-black); /* Black text */
     margin-bottom: 1rem;
 }
 
 .cta-content p {
-    color: var(--pure-white);
+    color: var(--pure-black); /* Black text */
     margin: 0;
 }
 
-.cta-buttons {
-    display: flex;
-    gap: 1rem;
-    flex-shrink: 0;
-}
-
 .cta-buttons .btn {
-    background: var(--pure-white);
-    color: var(--vibrant-orange);
-    border: 2px solid var(--pure-white);
+    background: var(--hot-pink); /* Bright buttons */
+    color: var(--pure-white);
+    border: 2px solid var(--hot-pink);
 }
 
 .cta-buttons .btn:hover {
-    background: transparent;
-    color: var(--pure-white);
-    border-color: var(--pure-white);
+    background: var(--electric-yellow);
+    color: var(--pure-black);
+    border-color: var(--electric-yellow);
 }
 
 /* Testimonials Carousel */
