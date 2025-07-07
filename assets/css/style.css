@@ -275,12 +275,6 @@ p {
     text-align: center;
 }
 
-.hero-simple .text-center {
-    width: 100%;
-    max-width: 800px; /* Optimal reading width */
-    margin: 0 auto;
-}
-
 /* Stats Banner */
 .stats-banner {
     background: var(--pure-black);
