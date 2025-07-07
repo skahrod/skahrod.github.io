@@ -267,6 +267,20 @@ p {
     max-width: 600px;
 }
 
+.hero-simple {
+    display: block;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-simple .text-center {
+    width: 100%;
+    max-width: 800px; /* Optimal reading width */
+    margin: 0 auto;
+}
+
 /* Stats Banner */
 .stats-banner {
     background: var(--pure-black);
