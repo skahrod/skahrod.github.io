@@ -107,6 +107,7 @@ p {
     font-weight: var(--font-weight-normal);
     color: var(--pure-black);
     line-height: 1.5;
+    text-align: center;
 }
 
 /* Container and Layout */
