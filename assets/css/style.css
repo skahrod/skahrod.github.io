@@ -228,6 +228,20 @@ p {
     overflow: hidden;
 }
 
+.hero-simple {
+    display: block;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.hero-simple .text-center {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .hero-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -236,13 +250,6 @@ p {
     max-width: none;
     margin: 0;
     padding: 0;
-}
-
-.hero-content {
-    grid-column: 1;
-    max-width: var(--container-width);
-    margin-left: auto;
-    padding: 4rem 4rem 4rem 2rem;
 }
 
 .hero-image {
