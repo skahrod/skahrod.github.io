@@ -239,15 +239,21 @@ p {
 }
 
 .hero-centered {
-    max-width: var(--container-width); /* Match other sections */
-    margin: 0 auto;
-    padding: 0 2rem;
-    text-align: center;
+    max-width: var(--container-width) !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+    text-align: center !important;
 }
 
 .hero-centered .text-center {
-    max-width: 800px; /* Limit text width for readability */
-    margin: 0 auto;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+.hero-centered .lead {
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 .hero-content {
