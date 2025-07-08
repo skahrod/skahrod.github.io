@@ -356,7 +356,8 @@ p {
 .btn-group {
     display: flex;
     gap: 1rem;
-    align-items: right;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Cards */
