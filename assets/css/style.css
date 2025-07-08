@@ -245,6 +245,11 @@ p {
     text-align: center;
 }
 
+.hero-centered .text-center {
+    max-width: 800px; /* Limit text width for readability */
+    margin: 0 auto;
+}
+
 .hero-content {
     grid-column: 1;
     max-width: var(--container-width);
