@@ -596,6 +596,18 @@ p {
     background-image: url('/assets/images/article-3.png');
 }
 
+.article-card:nth-child(4) .article-image {
+    background-image: url('/assets/images/article-4.png');
+}
+
+.article-card:nth-child(5) .article-image {
+    background-image: url('/assets/images/article-5.png');
+}
+
+.article-card:nth-child(6) .article-image {
+    background-image: url('/assets/images/article-6.png');
+}
+
 .article-content {
     padding: 1.5rem;
 }
