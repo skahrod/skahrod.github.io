@@ -63,33 +63,41 @@ a:hover { color: var(--ink); }
 
 /* ---------- header ---------- */
 
-.site-head { padding: 26px 0 22px; }
+.site-head {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 40;
+  background: var(--bone);
+  border-bottom: 1px solid var(--hairline);
+  padding: 14px 0;
+}
 
 .site-head__inner {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: space-between;
   gap: 30px;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  min-height: 76px;   /* == the wordmark block, so hiding it cannot move the burger */
 }
 
 /* Descriptor as the eyebrow — the spec's rule for wide formats. */
 .eyebrow {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.4em;
-  margin-left: 0.4em;
+  margin: 0 0 0 0.4em;
   color: var(--deep);
   text-transform: uppercase;
 }
 
 .wordmark {
   font-family: 'Anton', 'Arial Narrow', sans-serif;
-  font-size: 54px;
+  font-size: 27px;
   line-height: 0.94;
   letter-spacing: -0.005em;
   color: var(--ink);
-  margin: 10px 0 0;
+  margin: 8px 0 0;
   text-transform: uppercase;
 }
 .wordmark a { color: inherit; text-decoration: none; }
@@ -104,7 +112,7 @@ a:hover { color: var(--ink); }
   background: none;
   border: 0;
   padding: 11px 6px;
-  margin: 0 -6px 4px 0;
+  margin: 0 -6px 0 0;
   cursor: pointer;
   color: var(--ink);
   font: inherit;
@@ -139,10 +147,10 @@ a:hover { color: var(--ink); }
   padding-bottom: 3px;
 }
 .has-js .site-nav a {
-  font-size: 34px;
-  letter-spacing: 0.005em;
+  font-size: 22px;          /* below the 27px wordmark: the nav is not the brand */
+  letter-spacing: 0.02em;
   border-bottom: 0;
-  padding: 13px 0;
+  padding: 15px 0;          /* the tap target lives here, not in the font size */
   border-top: 1px solid var(--hairline);
 }
 .has-js .site-nav__inner a:first-child { border-top: 0; }
@@ -158,7 +166,7 @@ a:hover { color: var(--ink); }
 
 /* ---------- work grid ---------- */
 
-main { padding-bottom: 20px; }
+main { padding-top: 128px; padding-bottom: 20px; }
 
 .grid {
   display: grid;
@@ -277,8 +285,27 @@ main { padding-bottom: 20px; }
   align-items: start;
 }
 
-.portrait img { width: 100%; }
-.portrait figcaption { font-size: 12px; color: var(--muted); margin-top: 10px; letter-spacing: 0.04em; }
+/* The only photograph on the site sits on a gingham block, offset so an L of
+   check shows behind it. Still the frame rule: gingham around the picture,
+   never under it. The figure's own padding holds the offset, so the block
+   cannot push past the column at narrow widths. */
+.portrait { position: relative; padding: 0 24px 24px 0; }
+.portrait::before {
+  content: "";
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: calc(100% - 24px);
+  aspect-ratio: 1 / 1;
+  background-image: var(--gingham);
+  background-size: 34px 34px;
+  z-index: 0;
+}
+.portrait img { width: 100%; position: relative; z-index: 1; }
+.portrait figcaption {
+  font-size: 12px; color: var(--muted); letter-spacing: 0.04em;
+  position: relative; z-index: 1; margin-top: 36px;
+}
 
 .prose { max-width: 64ch; }
 .prose p { margin: 0 0 1.15em; }
@@ -367,10 +394,10 @@ h2 + * { margin-top: 16px; }
   :root { --gutter: 18px; }
   body { font-size: 16px; }
   .grid { grid-template-columns: 1fr; gap: 40px; margin: 34px 0 54px; }
-  .wordmark { font-size: 40px; }
-  .site-head__inner { align-items: flex-start; gap: 14px; flex-wrap: nowrap; }
-  .burger { margin-top: 6px; flex-shrink: 0; }
-  .has-js .site-nav a { font-size: 30px; }
+  .wordmark { font-size: 24px; }
+  .site-head__inner { gap: 14px; min-height: 70px; }
+  .burger { flex-shrink: 0; }
+  .has-js .site-nav a { font-size: 20px; }
   .listing li { flex-direction: column; gap: 4px; }
   .listing time, .listing .when { flex: none; }
   .thorn { width: 210px; margin: 36px auto; }
@@ -458,36 +485,21 @@ h2 + * { margin-top: 16px; }
   50%      { transform: translateY(5px); }
 }
 
-/* The homepage header floats over the poster. Its default state is solid,
-   so without JavaScript it is still legible; the script makes it
-   transparent while you are on the poster. */
-.home .site-head {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 40;
-  background: var(--bone);
-  border-bottom: 1px solid var(--hairline);
-  padding: 12px 0;
-}
-.home .site-head .wordmark { font-size: 27px; margin-top: 6px; }
-.home .site-head .eyebrow { font-size: 10px; }
+/* Over the poster the same header simply goes see-through. Its geometry is
+   untouched, so the burger does not move. */
 
 .home .site-head.is-over {
   background: transparent;
   border-bottom: 0;
-  padding: 20px 0;
 }
 .home .site-head.is-over .wordmark,
 .home .site-head.is-over .eyebrow { display: none; }
 .home .site-head.is-over .site-head__inner { justify-content: flex-end; }
-.home .site-head.is-over .burger__bars i { height: 4px; background: var(--ink); }
 
-.home main { padding-top: 124px; }
 .home #main { scroll-margin-top: 0; }
 
 @media (max-width: 620px) {
-  .home main { padding-top: 96px; }
+  main { padding-top: 110px; }
   .poster { padding: 78px var(--gutter) 96px; }
   .poster__cue { bottom: 22px; width: 52px; height: 52px; }
-  .home .site-head .wordmark { font-size: 22px; }
 }
