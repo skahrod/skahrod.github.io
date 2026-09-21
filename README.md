@@ -6,18 +6,25 @@ the files exactly as they are.
 
 ## What to do first
 
-1. **Replace the six placeholder photos** in `assets/images/`. Keep the
-   filenames. `work-01.jpg` … `work-06.jpg` are square and used on the
-   homepage grid; `work-01-b.jpg` … `work-06-b.jpg` are landscape and used
-   as the hero at the top of each piece page.
-2. **Write the piece pages.** Each file in `work/` has a paragraph marked
-   `[Replace this paragraph.]` and a set of facts (materials, size, year,
-   status). The titles are placeholders too.
-3. **Finish the Contact page.** Two paragraphs are marked in bold square
-   brackets — the one about your weaving heritage, and the one about markets.
-4. **Swap the email** when `inthebrambles.co.uk` is bought. It appears in
-   `contact.html` and in the footer of every page; find and replace
-   `sandykahrod@gmail.com` with `sandy@inthebrambles.co.uk`.
+1. **Replace the placeholder photos** in `assets/images/`. Keep the filenames.
+   `work-01.jpg` and `work-02.jpg` are square and used on the homepage grid;
+   `work-01-b.jpg` and `work-02-b.jpg` are landscape and used as the hero at
+   the top of each piece page. `work-03*` are gone: the Carnival and Lent
+   page has no photograph yet, and says so rather than pretending.
+2. **Write the two made pieces** in `work/`. Each has its body copy marked in
+   bold square brackets, plus four facts (materials, size, year, status).
+   `innovative-module.html` needs a real title and a real filename too.
+3. **Swap the email** when `inthebrambles.co.uk` is bought. It appears in
+   `contact.html`; find and replace `inthebrambles@gmail.com` with
+   `sandy@inthebrambles.co.uk`.
+
+## A piece with no photograph
+
+`work/carnival-and-lent.html` is a project in development, so it has no hero
+image and its homepage tile is a bone square between two gingham bands
+(`.shot--soon`) rather than a placeholder photo. When there is something to
+show, drop the `shot--soon` div for a normal `.tile__shot` holding an `<img>`,
+and add a `.piece__hero` back at the top of the page.
 
 Search the repo for `[` to find every remaining placeholder.
 
@@ -48,6 +55,20 @@ The menu is a burger at every width. The links sit in the page markup, so
 without JavaScript they render as a plain visible row — `assets/js/nav.js`
 collapses them and wires up the button. To add a link, add an `<a>` inside
 `<nav id="menu">` on every page.
+
+## Instagram
+
+One link, in the footer, rather than a handle repeated on every page. It is
+Instagram's official glyph, inlined from their brand assets, on no background:
+black at rest and Deep Thorn on hover, the same colour change the menu links
+make. The source file is kept at `assets/images/instagram-glyph.svg`.
+
+Three things to keep if you edit it. The `fill="currentColor"` on the `<svg>`,
+which is what lets the glyph change colour at all. The `aria-label` on the
+link, the only thing telling a screen reader where it goes now the handle is
+gone. And the invisible 44px box around the 24px glyph — that is the tap
+target, and the `-10px` right margin that goes with it is what lines the glyph
+up with the gutter instead of its box.
 
 ## Domain
 
