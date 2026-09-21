@@ -244,7 +244,7 @@ main { padding-top: 128px; }
 .piece__title {
   font-family: 'Anton', 'Arial Narrow', sans-serif;
   font-size: clamp(46px, 8vw, 86px);
-  line-height: 0.88;
+  line-height: 0.94;
   letter-spacing: -0.005em;
   margin: 28px 0 0;
   text-transform: uppercase;
@@ -441,7 +441,7 @@ h2 + * { margin-top: 16px; }
 .lost h1 {
   font-family: 'Anton', 'Arial Narrow', sans-serif;
   font-size: clamp(54px, 11vw, 116px);
-  line-height: 0.88;
+  line-height: 0.94;
   margin: 0;
   text-transform: uppercase;
 }
