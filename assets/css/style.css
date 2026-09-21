@@ -166,13 +166,13 @@ a:hover { color: var(--ink); }
 
 /* ---------- work grid ---------- */
 
-main { padding-top: 128px; padding-bottom: 20px; }
+main { padding-top: 128px; }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 46px 34px;
-  margin: 46px 0 70px;
+  margin: 46px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -203,9 +203,40 @@ main { padding-top: 128px; padding-bottom: 20px; }
   margin: 6px 0 0;
 }
 
+/* A piece with no photograph yet — a project still in development. Applies
+   the site's own rule at tile scale: gingham as a band top and bottom, bone
+   in between, never gingham as the ground. When there is a photograph,
+   replace the whole <div> with a plain .tile__shot holding an <img>. */
+.shot--soon {
+  position: relative;
+  display: grid;
+  place-items: center;
+  background: var(--bone);
+  border: 1px solid var(--hairline);
+  overflow: hidden;
+}
+.shot--soon::before,
+.shot--soon::after {
+  content: "";
+  position: absolute; left: 0; right: 0;
+  height: 16px;
+  background-image: var(--gingham);
+  background-size: 32px 32px;
+}
+.shot--soon::before { top: 0; }
+.shot--soon::after  { bottom: 0; }
+.shot--soon span {
+  font-family: 'Anton', 'Arial Narrow', sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-align: center;
+  padding: 0 24px;
+}
 /* ---------- piece pages ---------- */
 
-.piece { margin: 0 0 70px; }
+.piece { margin: 0; }
 
 .piece__hero { margin: 34px 0 0; background: var(--hairline); }
 .piece__hero img { width: 100%; }
@@ -251,11 +282,10 @@ main { padding-top: 128px; padding-bottom: 20px; }
 .plates figure { margin: 0; }
 .plates figcaption { font-size: 13px; color: var(--muted); margin-top: 9px; }
 
-/* Thorn rule — the divider. Keeps its own aspect ratio: stretched flat
-   across a wide column the thorns collapse into scratches. */
-.thorn { display: block; width: 300px; height: auto; margin: 52px auto; }
-
 .pager {
+  margin: 56px 0 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--hairline);
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -273,7 +303,7 @@ main { padding-top: 128px; padding-bottom: 20px; }
 .lede {
   font-size: clamp(21px, 2.4vw, 26px);
   line-height: 1.42;
-  max-width: 30ch;
+  max-width: 34ch;
   margin: 0;
 }
 
@@ -309,6 +339,16 @@ main { padding-top: 128px; padding-bottom: 20px; }
 
 .prose { max-width: 64ch; }
 .prose p { margin: 0 0 1.15em; }
+
+/* Credentials sit under the statement, not inside it — training and
+   publications are a record, not what the work is about. */
+.credits {
+  margin: 30px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--muted);
+  max-width: 54ch;
+}
 
 h2 {
   font-family: 'Anton', 'Arial Narrow', sans-serif;
@@ -354,7 +394,7 @@ h2 + * { margin-top: 16px; }
 
 /* Deliberately slight: a name, what she does, where to find her. The gingham
    band closes the page instead of a slab of footer. */
-.site-foot { margin-top: 70px; border-top: 1px solid var(--hairline); }
+.site-foot { margin-top: 78px; border-top: 1px solid var(--hairline); }
 .site-foot .wrap { padding-top: 24px; padding-bottom: 24px; }
 
 .nb { white-space: nowrap; }
@@ -366,9 +406,34 @@ h2 + * { margin-top: 16px; }
   letter-spacing: 0.18em;
   text-transform: uppercase;
 }
-.foot__ig { margin: 7px 0 0; font-size: 14px; }
-.foot__ig a { color: var(--deep); text-decoration: none; }
-.foot__ig a:hover { color: var(--ink); text-decoration: underline; }
+/* Instagram sits here alone, as a tile rather than a repeated handle. It is
+   an "IG" lockup in the site's own type, not Instagram's glyph — that mark is
+   theirs. Swap in their official asset from instagram.com/brand if you prefer
+   the familiar camera. */
+.foot-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: nowrap;   /* the name wraps internally; the tile stays beside it */
+}
+.foot__social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 44px;         /* an invisible 44px tap target around a 24px glyph */
+  height: 44px;
+  margin-right: -10px; /* so the glyph, not its box, lines up with the gutter */
+  color: var(--ink);
+  text-decoration: none;
+}
+.foot__social:hover { color: var(--deep); }
+.foot__social:focus-visible { outline: 3px solid var(--pink); outline-offset: 2px; }
+/* Instagram's official glyph, from their brand assets, inlined so it follows
+   the link's colour: black normally, Deep Thorn on hover, matching the menu
+   links. The source file is kept at assets/images/instagram-glyph.svg. */
+.foot__social svg { display: block; width: 24px; height: 24px; fill: currentColor; }
 
 /* ---------- 404 ---------- */
 
@@ -400,7 +465,6 @@ h2 + * { margin-top: 16px; }
   .has-js .site-nav a { font-size: 20px; }
   .listing li { flex-direction: column; gap: 4px; }
   .listing time, .listing .when { flex: none; }
-  .thorn { width: 210px; margin: 36px auto; }
   .plates { grid-template-columns: 1fr; }
 }
 
